@@ -1,182 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PAT Cargo VAD LLC</title>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            color: #333;
-        }
-        nav {
-            background: #000;
-            color: #fff;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 30px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        nav .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 16px;
-        }
-        .hero {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            padding: 80px 20px;
-            background: #111;
-            color: #fff;
-            min-height: 100vh;
-            animation: fadeIn 2s ease-in-out;
-        }
-        .hero-text {
-            max-width: 500px;
-            padding: 20px;
-            animation: slideInLeft 1.5s ease;
-        }
-        .hero-text h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
-        .hero-text p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        .hero-img img {
-            max-width: 400px;
-            width: 100%;
-            border-radius: 10px;
-            animation: slideInRight 1.5s ease;
-        }
-        .section {
-            padding: 60px 20px;
-            text-align: center;
-            max-width: 900px;
-            margin: 0 auto;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 1s ease;
-        }
-        .section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .section h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
-        .section p {
-            font-size: 18px;
-            line-height: 1.8;
-            color: #555;
-        }
-        .contact {
-            background: #e9e9e9;
-            padding: 60px 20px;
-        }
-        footer {
-            background: #000;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideInLeft {
-            from { transform: translateX(-50px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-        @keyframes slideInRight {
-            from { transform: translateX(50px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reu Cafe LP</title>
+  <style>
+    :root{
+      --brown:#5a3e2b;
+      --gold:#c6a26b;
+      --dark:#121212;
+      --card:#1e1e1e;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Arial, Helvetica, sans-serif;background:var(--dark);color:#fff;}
+    a{color:var(--gold);text-decoration:none}
+    header{background:var(--brown);padding:26px 16px;text-align:center;border-bottom:4px solid var(--gold)}
+    header h1{margin:0;font-size:2.2rem}
+    header p{margin:6px 0 0;opacity:.9}
+    nav{background:#0f0f0f;text-align:center;padding:10px}
+    nav a{color:#fff;margin:0 14px;font-weight:bold}
+    nav a:hover{color:var(--gold)}
+    .hero{display:flex;justify-content:center;align-items:center;background:#222;padding:34px}
+    .hero img{max-width:92%;border-radius:12px;border:4px solid var(--gold)}
+    .section{max-width:1100px;margin:20px auto;background:var(--card);padding:22px;border:1px solid rgba(255,255,255,.08);border-radius:12px}
+    .section h2{margin:0 0 10px;color:var(--gold)}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+    .gallery img{width:100%;border-radius:10px;border:2px solid var(--brown)}
+    ul{line-height:1.8;margin:0;padding-left:18px}
+    footer{background:var(--brown);border-top:4px solid var(--gold);text-align:center;padding:18px;margin-top:24px}
+  </style>
 </head>
 <body>
 
-    <nav>
-        <div class="logo">PAT Cargo VAD LLC</div>
+  <header>
+    <h1>Reu Cafe LP</h1>
+    <p>Fresh coffee • Warm bites • Neighborhood vibes</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#menu">Menu & Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <img src="https://photos.pandatur.md/08e5865e98700e745a5b9406437cc897.jpg" alt="Cafe Hero">
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <div class="two-col">
+      <p>
+        At <strong>Reu Cafe LP</strong>, we keep things simple: great coffee, fresh snacks, and friendly service.
+        Drop by for your morning espresso, a relaxed afternoon break, or a cozy evening chat.
+      </p>
+      <p>
+        We work with quality beans and seasonal ingredients, and we’re proud to be a welcoming
+        spot for neighbors and visitors alike.
+      </p>
+    </div>
+  </section>
+
+  <!-- MENU / SERVICES -->
+  <section id="menu" class="section">
+    <h2>Menu & Services</h2>
+    <ul>
+      <li>Espresso, Cappuccino, Latte, Cold Brew</li>
+      <li>Fresh Pastries & Small Bites</li>
+      <li>Takeaway & Quick-Serve Counter</li>
+      <li>Simple Catering for Small Meetings</li>
+      <li>Community Events & Tasting Sessions</li>
+    </ul>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="section">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="https://avatars.mds.yandex.net/i?id=bd046ffc47d239994c06a2be17ea733f68c5a52c-3560695-images-thumbs&n=13" alt="Cafe Image 1">
+      <img src="https://i.insider.com/573cc3c89105844d018c3a71" alt="Cafe Image 2">
+      <img src="https://p2.zoon.ru/preview/E4kOqSvAVSjYli9KoRDTLA/2400x1500x75/1/d/b/original_5ffdd3c50c212d05dc13ed77_60ae34ead4683.jpg" alt="Cafe Image 3">
+      <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA19l3gr.img?w=1860&h=1200&m=4&q=98" alt="Cafe Image 4">
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <div class="two-col">
+      <div>
+        <p>📞 <strong>Phone:</strong> 4175706706</p>
+        <p>✉️ <strong>Email:</strong> <a href="mailto:contact@reucafe.shop">contact@reucafe.shop</a></p>
+        <p>📍 <strong>City:</strong> Whittier, CA, USA</p>
+      </div>
+      <div>
+        <p><em>Opening Hours</em></p>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+          <li>Mon–Fri: 7:30–19:00</li>
+          <li>Sat–Sun: 8:00–18:00</li>
         </ul>
-    </nav>
-
-    <div class="hero" id="home">
-        <div class="hero-text">
-            <h1>PAT Cargo VAD LLC</h1>
-            <p>Your trusted partner in transportation and warehousing. We provide reliable cargo services and storage solutions to meet your business needs with efficiency and care.</p>
-        </div>
-        <div class="hero-img">
-            <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&auto=format&fit=crop&w=934&q=80" alt="Cargo Services">
-        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="section" id="about">
-        <h2>About Us</h2>
-        <p>PAT Cargo VAD LLC is a Domestic LLC based in Arizona, offering specialized services in transportation and warehousing. With a focus on reliability and customer satisfaction, we have been serving businesses since 2021.</p>
-        <p><strong>Registered Address:</strong><br>
-        2902 W Sweetwater Ave, Apt 2190, Phoenix, AZ 85029, United States</p>
-    </div>
-
-    <div class="section contact" id="contact">
-        <h2>Contact Us</h2>
-        <p><strong>Email:</strong> <a href="mailto:contact@patcargovadllc.click">contact@patcargovadllc.click</a></p>
-        <p><strong>Agent Address:</strong><br>
-        2902 W Sweetwater Ave, Apt 2190, Phoenix, AZ 85029, United States</p>
-    </div>
-
-    <footer>
-        &copy; 2025 PAT Cargo VAD LLC. All rights reserved.
-    </footer>
-
-    <script>
-        // Intersection Observer for fade-in effect
-        const sections = document.querySelectorAll('.section');
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-    </script>
+  <footer>
+    <p>&copy; 2025 Reu Cafe LP — All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
